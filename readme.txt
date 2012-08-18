@@ -35,6 +35,9 @@ The objective for writing this plugin was to provide a comprehensive, working de
 
 == Changelog ==
 
+= 0.2 =
+* parse_query is actually and action. Updated accordingly.
+
 = 0.1 =
 * Initial release prior to WordCamp Montreal 2012
 * Oh, it's pretty ugly, I'm not going to deny it.

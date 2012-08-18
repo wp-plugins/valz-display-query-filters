@@ -31,7 +31,7 @@ class Valz_Query_Filters {
 		add_filter( 'request', array( $this, 'request_filter' ) );
 		add_action( 'parse_request', array( $this, 'parse_request_action' ) );
 		add_filter( 'query_string', array( $this, 'query_string_filter' ) );
-		add_filter( 'parse_query', array( $this, 'parse_query_filter' ) );
+		add_action( 'parse_query', array( $this, 'parse_query_action' ) );
 		add_filter( 'pre_get_posts', array( $this, 'pre_get_posts_action' ) );
 		add_filter( 'posts_search', array( $this, 'posts_search_filter' ), 10, 2 );
 		add_filter( 'posts_where', array( $this, 'posts_where_filter' ), 10, 2 );
@@ -91,11 +91,9 @@ class Valz_Query_Filters {
 	 * @param /WP_Query $wp_query_object
 	 * @return /WP_Query
 	 */
-	function parse_query_filter( $wp_query_object ){
+	function parse_query_action( $wp_query_object ){
 		echo '<h1>parse_query</h1>';
 		print_r( $wp_query_object );
-
-		return $wp_query_object;
 	}
 
 	/**
